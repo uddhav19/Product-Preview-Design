@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Card_preview</title>
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+        }
+        .main-product{
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            
+            margin: auto;
+            cursor: zoom-in;
+        }
+        .product-card{
+            height: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 8px;
+           cursor: pointer;
+        }
+        .product-card:hover{
+            border: 1px solid rgb(34, 150, 196);
+            box-shadow: 0 0 15px 2px skyblue;
+        }
+        .main-product-cointainer{
+            margin-left: 30%;
+            margin-right: -30%;
+            display: flex;
+            flex-direction: column;
+          
+
+        }
+    </style>
+</head>
+<body>
+    <div  class="main-product-cointainer">
+        <img src="./img1.png" class="product-card" onclick="ChangeImage('./img1.png')" >
+        <img src="./img2.jpg" class="product-card" onclick="ChangeImage('../img2.jpg')" >
+        <img src="./img3.png" class="product-card" onclick="ChangeImage('../img3.png')" >
+        <img src="./img4.jpg" class="product-card" onclick="ChangeImage('../img4.jpg')" >
+        <img src="./shopping.webp" class="product-card" onclick="ChangeImage('./shopping.webp')" >
+        
+    </div>
+    <img src="./img1.png" class="main-product" id="main-product" alt="">
+    <script>
+        function ChangeImage(imageName){
+            const mainImage = document.getElementById("main-product");
+            mainImage.src = imageName;
+
+        }
+    </script>
+</body>
+</html>
